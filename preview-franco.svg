@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="1200" height="630" fill="#2d3b7d"/>
+  
+  <!-- Decoración dorada -->
+  <circle cx="150" cy="150" r="80" fill="#d4af37" opacity="0.2"/>
+  <circle cx="1050" cy="500" r="100" fill="#d4af37" opacity="0.15"/>
+  
+  <!-- Línea dorada -->
+  <line x1="100" y1="280" x2="1100" y2="280" stroke="#d4af37" stroke-width="3"/>
+  
+  <!-- Título principal -->
+  <text x="600" y="180" font-family="'Playfair Display', serif" font-size="80" font-weight="700" fill="#ffffff" text-anchor="middle">
+    Cr. Franco
+  </text>
+  <text x="600" y="280" font-family="'Playfair Display', serif" font-size="80" font-weight="700" fill="#d4af37" text-anchor="middle">
+    Martínez
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="600" y="380" font-family="'Montserrat', sans-serif" font-size="40" font-weight="400" fill="#ffffff" text-anchor="middle">
+    Celebra conmigo mi graduación
+  </text>
+  
+  <!-- Fecha -->
+  <text x="600" y="480" font-family="'Montserrat', sans-serif" font-size="32" font-weight="500" fill="#d4af37" text-anchor="middle">
+    3 de octubre de 2026
+  </text>
+  
+  <!-- Símbolo de graduación -->
+  <text x="600" y="570" font-family="sans-serif" font-size="48" text-anchor="middle">🎓</text>
+</svg>
