@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Graduación Franco Martínez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fafbfc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 50px 35px;
+            max-width: 520px;
+            box-shadow: 0 10px 40px rgba(66, 103, 178, 0.08);
+            border: 1px solid #e8eef5;
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        .diploma-image {
+            width: 140px;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
+        }
+        
+        .header-text {
+            color: #5a7ec4;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #2d3b7d;
+            font-size: 48px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .countdown-container {
+            background: linear-gradient(135deg, #fafbfc 0%, #f5f8ff 100%);
+            border: 1px solid #e8eef5;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .countdown-label {
+            color: #d4af37;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        .countdown-items {
+            display: flex;
+            justify-content: space-around;
+            gap: 12px;
+        }
+        
+        .countdown-item {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .countdown-number {
+            color: #d4af37;
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        
+        .countdown-text {
+            color: #7a8bc4;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+        
+        .info-section {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .info-label {
+            color: #d4af37;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .info-value {
+            color: #2d3b7d;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            color: #d4af37;
+            font-weight: 600;
+        }
+        
+        .location-link {
+            color: #4267b2;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 2px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+        
+        .location-link:hover {
+            color: #2d3b7d;
+        }
+        
+        .section-title {
+            color: #2d3b7d;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-item {
+            background: linear-gradient(135deg, #fafbfc 0%, #f5f8ff 100%);
+            border: 1px solid #e8eef5;
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+        }
+        
+        .detail-icon {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+        
+        .detail-text {
+            color: #2d3b7d;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .gift-section {
+            background: linear-gradient(135deg, #fafbfc 0%, #f5f8ff 100%);
+            border: 1px solid #e8eef5;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        
+        .gift-text {
+            color: #7a8bc4;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .account-info {
+            background: white;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #2d3b7d;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+
+        .footer-text {
+            color: #9aabce;
+            font-size: 12px;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 40px 28px;
+            }
+            
+            h1 {
+                font-size: 38px;
+            }
+            
+            .diploma-image {
+                width: 110px;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <div class="header-text">¡Vamos a celebrar mi graduación!</div>
+            
+            <!-- Imagen del diploma -->
+            <img src="diploma-franco.png" alt="Diploma" class="diploma-image">
+            
+            <h1>Cr. Franco<br>Martínez</h1>
+            
+            <!-- Countdown -->
+            <div class="countdown-container">
+                <div class="countdown-label">Faltan</div>
+                <div class="countdown-items">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">0</div>
+                        <div class="countdown-text">Días</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">0</div>
+                        <div class="countdown-text">Horas</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">0</div>
+                        <div class="countdown-text">Minutos</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">0</div>
+                        <div class="countdown-text">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+            
+            <!-- Fecha y Hora -->
+            <div class="info-section">
+                <span class="info-label">Fecha</span>
+                <div class="info-value">Sábado, 3 de octubre de 2026</div>
+            </div>
+            
+            <div class="info-section">
+                <span class="info-label">Hora</span>
+                <div class="info-value">19:00 a 23:00 hs</div>
+            </div>
+            
+            <!-- Dirección -->
+            <div class="info-section">
+                <span class="info-label">Ubicación</span>
+
+                <div class="info-value" style="margin-bottom: 8px;">
+                    Centro Deportivo A Punto
+                </div>
+
+                <div class="info-value">
+                    <a href="javascript:void(0)" class="location-link" onclick="mostrarMapas()">
+                        📍 José Mármol 646
+                    </a>
+
+                    <div id="map-options" style="display:none; margin-top:14px;">
+
+                        <a href="https://www.waze.com/ul?q=Centro%20Deportivo%20A%20Punto%2C%20Montevideo&navigate=yes"
+                           target="_blank"
+                           class="location-link">
+                            Waze
+                        </a>
+
+                        <span style="color:#2d3b7d; margin:0 10px;">·</span>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Centro%20Deportivo%20A%20Punto%2C%20Montevideo"
+                           target="_blank"
+                           class="location-link">
+                            Google Maps
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+            
+            <!-- Detalles en grid -->
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-icon">🍕</div>
+                    <div class="detail-text">Pizza y chivitos</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">⚽</div>
+                    <div class="detail-text">Fútbol y toro mecánico</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">👕</div>
+                    <div class="detail-text">Elegante & cómodo</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🎉</div>
+                    <div class="detail-text">¡A celebrar!</div>
+                </div>
+            </div>
+            
+            <!-- Sección de regalos -->
+            <div class="gift-section">
+                <div class="gift-text">
+                    <strong>Tu presencia es el mejor regalo 💙</strong><br>
+                    Si además querés hacerme un regalito,<br>
+                    te dejo mis datos:
+                </div>
+                <div class="account-info">
+                    Banco: Itaú<br>
+                    Cuenta: 8556172<br>
+                    Nombre: Franco Martínez
+                </div>
+            </div>
+            
+            <!-- Confirmación de asistencia -->
+            <div class="gift-section" style="text-align:center;">
+
+                <div style="
+                    font-family:'Montserrat', sans-serif;
+                    color:#5a7ec4;
+                    font-size:12px;
+                    font-weight:600;
+                    letter-spacing:2.5px;
+                    text-transform:uppercase;
+                    line-height:1.8;
+                ">
+                    CONFIRMA ASISTENCIA<br>
+                    HASTA EL 23/09
+                </div>
+
+                <a href="https://wa.me/59891026735?text=Hola%20Franco%21%20Confirmo%20mi%20asistencia%20a%20tu%20graduacion"
+                   id="btn-whatsapp"
+                   class="btn-confirm"
+                   target="_blank"
+                   onclick="return verificarConfirmacion(event)"
+                   style="
+                       display:inline-block;
+                       padding:12px 22px;
+                       font-family:'Montserrat', sans-serif;
+                       font-size:13px;
+                       font-weight:600;
+                       color:white;
+                       background:#4267b2;
+                       border:none;
+                       border-radius:10px;
+                       text-decoration:none;
+                       cursor:pointer;
+                       transition:all 0.3s ease;
+                       margin-top:12px;
+                   ">
+                    💬 Confirmar por WhatsApp
+                </a>
+
+                <div style="
+                    color:#9aabce;
+                    font-size:11px;
+                    margin-top:10px;
+                    font-family:'Montserrat', sans-serif;
+                ">
+                    Se abrirá un mensaje listo para enviar
+                </div>
+
+                <p id="msg-cerrado" style="
+                    color:#7a8bc4;
+                    font-size:12px;
+                    margin-top:12px;
+                    display:none;
+                ">
+                    El plazo para confirmar asistencia ha finalizado.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function mostrarMapas() {
+            const opciones = document.getElementById('map-options');
+
+            if (opciones.style.display === 'none') {
+                opciones.style.display = 'block';
+            } else {
+                opciones.style.display = 'none';
+            }
+        }
+        
+        const fechaCierreAsistencia = new Date('2026-09-24T00:00:00-03:00').getTime();
+
+        function verificarEstadoAsistencia() {
+            const ahora = new Date().getTime();
+            const btnWhatsapp = document.getElementById('btn-whatsapp');
+            const msgCerrado = document.getElementById('msg-cerrado');
+
+            if (ahora >= fechaCierreAsistencia) {
+                btnWhatsapp.style.opacity = '0.5';
+                btnWhatsapp.style.cursor = 'not-allowed';
+                btnWhatsapp.style.background = '#cccccc';
+
+                msgCerrado.style.display = 'block';
+            } else {
+                btnWhatsapp.style.opacity = '1';
+                btnWhatsapp.style.cursor = 'pointer';
+                btnWhatsapp.style.background = '#4267b2';
+
+                msgCerrado.style.display = 'none';
+            }
+        }
+
+        function verificarConfirmacion(event) {
+            const ahora = new Date().getTime();
+
+            if (ahora >= fechaCierreAsistencia) {
+                event.preventDefault();
+
+                alert('El plazo para confirmar asistencia finalizó el 23/09.');
+
+                return false;
+            }
+
+            return true;
+        }
+
+        function updateCountdown() {
+            // Fecha y hora del evento: 3 de octubre de 2026 a las 19:00 (zona horaria Uruguay UTC-3)
+            const eventDate = new Date('2026-10-03T19:00:00-03:00').getTime();
+            const now = new Date().getTime();
+            const difference = eventDate - now;
+            
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+            }
+        }
+        
+        // Actualizar ambos contadores
+        verificarEstadoAsistencia();
+        updateCountdown();
+        
+        // Actualizar cada segundo
+        setInterval(verificarEstadoAsistencia, 1000);
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
